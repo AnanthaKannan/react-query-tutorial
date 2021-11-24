@@ -1,24 +1,25 @@
-import logo from './logo.svg';
+// import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
 import './App.css';
+import { QueryClientProvider, QueryClient } from 'react-query';
+import { ReactQueryDevtools } from 'react-query/devtools'
+import Home from './component/Home.page';
+import RQsuperHero from './component/RQsuperHero.page';
+import SuperHero from './component/SuperHero.page';
+import ButtonClick from './component/ButtonClick';
+
+const queryClient = new QueryClient();
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <QueryClientProvider client={queryClient}>
+    <div>
+      {/* <Home /> */}
+      <RQsuperHero />
+      {/* <SuperHero /> */}
     </div>
+    <ReactQueryDevtools initialIsOpen={false} position='bottom-right' />
+    <ButtonClick />
+    </QueryClientProvider>
   );
 }
 

@@ -1,70 +1,48 @@
-# Getting Started with Create React App
+## REACT AMPLIFY
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+npm i -g @aws-amplify/cli
 
-## Available Scripts
+amplify configure
 
-In the project directory, you can run:
 
-### `npm start`
+## React QUERY:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+npm i react-query
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## About React query:
 
-### `npm run build`
+### isFetching:
+    It is used to fetch the data in background. Eg: if the data already there in the front end, if they try to fetch the data again, the isFetching will be true
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### cacheTime
+    If you are navigate again the same page, first it will use the catch data to show the values to user meanwhile
+    it will call the api
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### staleTime
+    If you are navigate again the page with in the staleTime, then it will not call the api agin to fetch the data
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### refetchOnMount : true | false | 'always'
+    The default value will be true. If you make this value as false, It will call only once, after that it will not call the api only reuse the old data to render
 
-### `npm run eject`
+### refetchOnWindowFocus: true | false | 'always'
+    The default value will be true, If you make this value as true, It will call the api, every time you comes to the screen. for eg: now you are different tab, moving to the corresponding tab the api will happen
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### refetchInterval: 2000
+    It is used to call the API between intervel. you can give the time, the api will call the particular time period
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### refetchIntervalInBackground: true | false
+    It is comes with refetchInterval, it will call the api even if you are not focusing on the screen
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### enabled: true | false
+    If the enable is false, the api call will not happen.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### onSuccess:
+    It is a call back function, once the api get success this function will call
 
-## Learn More
+### onError:
+    It is a call back function, once the api get failed this function will call
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### select:
+    It is a call back function, used to transform the data. once the api get success here the data will receive, you can write the logic here. So once you receive the data, you can get as a transform data.
