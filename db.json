@@ -15,5 +15,19 @@
             "name": "Jack",
             "alterEgo": "Power man"
         }
+    ],
+    "friends":[
+        {
+            "id":1,
+            "friend": "Hello"
+        },
+        {
+            "id":2,
+            "friend": "Hi"
+        },
+        {
+            "id":3,
+            "friend": "How"
+        }
     ]
 }

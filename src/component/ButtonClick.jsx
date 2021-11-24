@@ -1,9 +1,4 @@
-import { useQuery } from 'react-query';
-import axios from 'axios'
-
-const fetchSuperHero = () => {
-    return axios.get("http://localhost:4000/superHeros");
-}
+import { useSuperHerosData } from "../hooks/useSuperHeroData"
 
 const ButtonClick = () => {
 
@@ -14,19 +9,7 @@ const ButtonClick = () => {
     const onError = (err) => {
         console.log('onError data', err)
     }
-    const { isLoading, data, isError, error, isFetching, refetch } = useQuery('super-hero-button-click',
-     fetchSuperHero, 
-     {
-        enabled: false,
-        onSuccess: onSuccess,
-        onError: onError,
-        select: (data) => {
-            return data.data.map((obj, i) => {
-                obj.index = i;
-                return obj;
-            });
-        }
-    });
+    const { isLoading, data, isError, error, isFetching, refetch } = useSuperHerosData(onSuccess, onError)
 
     
 
@@ -42,9 +25,9 @@ const ButtonClick = () => {
         <div>
             <hr />
             <button onClick={ refetch }>Fetch Heros</button>
-            {/* data { JSON.stringify(data.data)} */}
+            {/* data { JSON.stringify(data)} */}
             <ul>
-                {data.map((hero) =>{
+                {data && data.map((hero) =>{
                     return <li>{ JSON.stringify(hero)} </li>
                 })}
             </ul>

@@ -17,8 +17,9 @@ function App() {
       <RQsuperHero />
       {/* <SuperHero /> */}
     </div>
-    <ReactQueryDevtools initialIsOpen={false} position='bottom-right' />
     <ButtonClick />
+    
+    <ReactQueryDevtools initialIsOpen={false} position='bottom-right' />
     </QueryClientProvider>
   );
 }
