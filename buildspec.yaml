@@ -1,0 +1,16 @@
+version: 0.2
+phases:
+  install:
+    runtime-version:
+      nodejs: 12
+    commands:
+      - echo "Installing depends ........... "   
+      - npm install
+  build:
+    commands:
+      - echo "Build the react project"
+      - ng build --prod
+  post_build:
+    commands:
+      - echo "updating files in s3 bucket"
+      - aws s3 sync build/ s3://learning-2025 --delete
