@@ -13,4 +13,4 @@ phases:
   post_build:
     commands:
       - echo "updating files in s3 bucket"
-      - aws s3 sync build/ s3://learning-2025
+      - aws s3 sync build/ s3://learning-2025 --delete
