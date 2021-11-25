@@ -12,6 +12,7 @@ const queryClient = new QueryClient();
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
+      <h1>I Love india</h1>
     <div>
       {/* <Home /> */}
       <RQsuperHero />
