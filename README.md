@@ -46,3 +46,5 @@ npm i react-query
 
 ### select:
     It is a call back function, used to transform the data. once the api get success here the data will receive, you can write the logic here. So once you receive the data, you can get as a transform data.
+
+###
