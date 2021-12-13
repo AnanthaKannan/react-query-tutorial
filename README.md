@@ -1,3 +1,6 @@
+## JEST
+https://reactjs.org/docs/testing-recipes.html
+
 # REACT AMPLIFY
 
 npm i -g @aws-amplify/cli

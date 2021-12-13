@@ -5,6 +5,7 @@ import { ReactQueryDevtools } from 'react-query/devtools'
 import RQsuperHero from './component/RQsuperHero.page';
 import ButtonClick from './component/ButtonClick';
 import AwsAmplify from './component/AwsAmplify';
+import Rendering from './TestComponent/Rendering';
 
 
 const queryClient = new QueryClient();
@@ -12,17 +13,16 @@ const queryClient = new QueryClient();
 function App() {
   return (
     
-    <AwsAmplify />
+    // <AwsAmplify />
 
-    
     // react query tutorial
-    // <QueryClientProvider client={queryClient}>
-    //   <div>
-    //     <RQsuperHero />
-    //     <ButtonClick />
-    //   </div>
-    // <ReactQueryDevtools initialIsOpen={false} position='bottom-right' />
-    // </QueryClientProvider>
+    <QueryClientProvider client={queryClient}>
+      <div>
+        <RQsuperHero />
+        <ButtonClick />
+      </div>
+    <ReactQueryDevtools initialIsOpen={false} position='bottom-right' />
+    </QueryClientProvider>
   );
 }
 
