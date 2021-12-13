@@ -3,9 +3,8 @@ import React, { useState, useEffect } from "react";
 export default function DataFetching(props) {
   const [user, setUser] = useState(null);
 
-  async function fetchUserData(id) {
+  const fetchUserData = async(id) => {
     const response = await fetch("/getUser;" + id);
-    // console.log('response', await response.json())
     setUser(await response.json());
   }
 

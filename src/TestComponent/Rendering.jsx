@@ -8,7 +8,6 @@ const Rendering = (props) => {
     else{
         return <span>Hey, Stranger</span>
     }
-
 }
 
 export default Rendering
