@@ -1,15 +1,27 @@
-## REACT AMPLIFY
+# REACT AMPLIFY
 
 npm i -g @aws-amplify/cli
 
-amplify configure
+### Configuration used to configure the credential
+    amplify configure
 
+### Amplify initial progress
+    amplify init
 
-## React QUERY:
+### Connect with cognito
+    amplify add auth
+    amplify push
+
+1.2.5
+
+https://docs.amplify.aws/ui/auth/authenticator/q/framework/react/
+
+# AWS deployment:
+    I have created the aws deployment here. buildspec.yaml file I have created for that. code build I have used for the deploy our code in aws
+
+# React QUERY:
 
 npm i react-query
-
-
 
 ## About React query:
 
