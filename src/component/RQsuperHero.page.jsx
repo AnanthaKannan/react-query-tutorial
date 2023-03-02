@@ -22,7 +22,7 @@ const RQsuperHero = () => {
     }
 
     return (
-        <div>
+        <div>eeeeeeeeeee
             {/* data { JSON.stringify(data.data)} */}
             <ul>
                 {data?.data.map((hero) =>{
